@@ -1,3 +1,3 @@
 # Randomizer
 
-A google extension to randomize things.
+A Google Chrome extension to randomize things.
