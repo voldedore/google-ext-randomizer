@@ -19,6 +19,17 @@ var copy = function () {
   }
 };
 
+function triggerEvent(el, eventName, options) {
+  var event;
+  if (window.CustomEvent) {
+    event = new CustomEvent(eventName, options);
+  } else {
+    event = document.createEvent('CustomEvent');
+    event.initCustomEvent(eventName, true, true, options);
+  }
+  el.dispatchEvent(event);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   var catName = '',
       subCatName = '';
@@ -40,7 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   Object.keys(faker).forEach(function(e) {
     // Remove locale, localeFallback, locales
-    var outOfScope = ['locale', 'localeFallback', 'locales', 'fake'];
+    var outOfScope = ['locale', 'localeFallback', 'locales', 'fake', 'definitions'];
+    //TODO: use definitions instead of current way
     if (outOfScope.indexOf(e) === -1) {
         var option = document.createElement("option");
         option.text = e;
@@ -63,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
             subCatSelect.appendChild(option);
       });
   });
+
+  // Trigger change for the first init
+  triggerEvent(catSelect, 'change');
 
   // On click of main button
   genBtn.addEventListener('click', randomize);
