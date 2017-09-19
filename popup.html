@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Randomizer</title>
     <style>
     #main-popup {
     width: 400px;
@@ -34,14 +34,28 @@
           <form>
             <div class="row">
               <div class="col-xs-6">
-                <div class="form-group">
-                  <label for="subcat">Subcategory</label>
-                  <select name="subcat" id="subcat" class="form-control">
-                  </select>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="subcat">Category</label>
+                    <select name="subcat" id="cat" class="form-control">
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <label for="subcat">Subcategory</label>
+                    <select name="subcat" id="subcat" class="form-control">
+                    </select>
+                  </div>
                 </div>
               </div>
               <div class="col-xs-6">
-                <button class="btn btn-primary" id="generate" type="button">Generate</button>
+                <div class="row">
+                  <button class="btn btn-primary" id="generate" type="button">Generate</button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-primary" id="gen-and-copy" type="button">Generate and Copy</button>
+                </div>
               </div>
             </div>
             <div class="row">
