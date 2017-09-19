@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+    #main-popup {
+    width: 400px;
+    }
+    #header {
+    height: 30px;
+    border-bottom: 1px #ccc solid;
+    }
+    #footer {
+    height: 30px;
+    border-top: 1px #ccc solid;
+    }
+    #content {
+    padding: 12px 0 12px 0;
+    }
+    </style>
+    <script src="popup.js"></script>
+    <script type="text/javascript" src="faker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  </head>
+  <body>
+    <div id="main-popup" class="container">
+      <div class="row" id="header">
+        <div class="col-xs-12">
+          <div>Data Faker</div>
+        </div>
+      </div>
+      <div class="row" id="content">
+        <div class="col-xs-12">
+          <form>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <label for="subcat">Subcategory</label>
+                  <select name="subcat" id="subcat" class="form-control">
+                  </select>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <button class="btn btn-primary" id="generate" type="button">Generate</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <label for="">Output</label>
+                <textarea name="output" id="output" cols="30" rows="3" class="form-control" readonly="readonly"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row" id="footer">Fullmode SEtting</div>
+    </div>
+  </body>
+</html>
