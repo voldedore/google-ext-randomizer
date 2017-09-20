@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Fill our 2 selects
   Object.keys(faker).forEach(function(e) {
     // Remove locale, localeFallback, locales
-    var outOfScope = ['locale', 'localeFallback', 'locales', 'fake', 'definitions', 'helpers'];
+    var outOfScope = ['locale', 'localeFallback', 'locales', 'fake', 'definitions', 'helpers', 'random'];
     //TODO: use definitions instead of current way
     if (outOfScope.indexOf(e) === -1) {
         var option = document.createElement("option");
@@ -111,6 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
             subCatSelect.appendChild(option);
       });
   });
+
+  // Trigger change for the first init in case of user doesnt want to keep settings.
+  triggerEvent(catSelect, 'change');
 
   // On click of main button
   genBtn.addEventListener('click', randomize);
