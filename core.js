@@ -1,4 +1,5 @@
 var persistence;
+var locale;
 
 function getSettings(callback) {
   chrome.storage.sync.get({

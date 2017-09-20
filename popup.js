@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
     catName = value.catName;
     subCatName = value.subCatName;
     persistence = value.persistence;
+    locale = value.locale;
+
+    //Set lang
+    faker.locale = value.locale;
 
     if (persistence) {
       for (var keys in catSelect.children) {
@@ -107,9 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
             subCatSelect.appendChild(option);
       });
   });
-
-  // Trigger change for the first init
-  triggerEvent(catSelect, 'change');
 
   // On click of main button
   genBtn.addEventListener('click', randomize);
