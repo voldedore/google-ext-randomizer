@@ -49,15 +49,6 @@
     var savedLocale = 'en';
     var persistence = true;
 
-    function getSettings(callback) {
-      chrome.storage.sync.get({
-        locale: 'en',
-        persistence: true
-      }, function(obj) {
-        callback(obj);
-      });
-    }
-
     function assignSettings(value) {
       savedLocale = value.locale;
       persistence = value.persistence;
@@ -87,17 +78,10 @@
     saveBtn.onclick = function (e) {
       var locale = langSel.value;
       var persistence = persistenceChkBox.checked;
-      chrome.storage.sync.set({
+      setSettings({
         locale: locale,
         persistence: persistence
-      }, function() {
-        // Update status to let user know options were saved.
-        var status = document.getElementById('status');
-        status.textContent = 'Options saved.';
-        setTimeout(function() {
-          status.textContent = '';
-        }, 2000);
-      });
+      }, 'status');
 
     };
 

@@ -39,9 +39,37 @@ document.addEventListener('DOMContentLoaded', function() {
       catSelect = getEl('cat'),
       subCatSelect = getEl('subcat');
 
+  function assignSettings(value) {
+    catName = value.catName;
+    subCatName = value.subCatName;
+    persistence = value.persistence;
+
+    if (persistence) {
+      for (var keys in catSelect.children) {
+        if (catName === catSelect.children[keys].value) {
+          catSelect.children[keys].selected = true;
+        }
+      }
+
+      triggerEvent(catSelect, 'change');
+
+      for (var keys in subCatSelect.children) {
+        if (subCatName === subCatSelect.children[keys].value) {
+          subCatSelect.children[keys].selected = true;
+        }
+      }
+    }
+
+  }
+
   function randomize() {
     subCatName = subCatSelect.options[subCatSelect.selectedIndex].value;
     outputFeed(faker[catName][subCatName]);
+
+    //Save settings if user want to
+    if (persistence) {
+      setSettings({catName: catName, subCatName: subCatName});
+    }
   }
 
   var genAndCopy = function () {
@@ -49,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     copy();
   }
 
+  // Fill our 2 selects
   Object.keys(faker).forEach(function(e) {
     // Remove locale, localeFallback, locales
     var outOfScope = ['locale', 'localeFallback', 'locales', 'fake', 'definitions', 'helpers'];
@@ -60,6 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         catSelect.appendChild(option);
     }
   });
+
+  //Save settings if user want to
+  getSettings(assignSettings);
 
   // On change of category select
   catSelect.addEventListener('change', function () {
