@@ -10,7 +10,7 @@
     "default_popup": "popup.html",
     "default_title": "Randomizer\n\nLeft-click to select randomized data\nRight-click for options"
   },
-  "options_page": "options.html",
+  "options_page": "main.html",
   "permissions": [
     "activeTab",
     "storage",

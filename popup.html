@@ -2,61 +2,41 @@
 <html>
   <head>
     <title>Randomizer</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="popup.js"></script>
     <script type="text/javascript" src="faker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="pure-min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <div id="main-popup" class="container">
       <div class="row" id="header">
         <div class="col-xs-12">
-          <div>Randomizer<a href="options.html" target="_blank">Go to full</a></div>
+          <div>Randomizer<a href="main.html" target="_blank">Go to full</a></div>
         </div>
       </div>
       <div class="row" id="content">
         <div class="col-xs-12">
-          <form>
-            <div class="row">
-              <div class="col-xs-6">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="subcat">Category</label>
-                      <select name="subcat" id="cat" class="form-control input-sm">
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="subcat">Subcategory</label>
-                      <select name="subcat" id="subcat" class="form-control input-sm">
-                      </select>
-                    </div>
-                  </div>
-                </div>
+          <form class="pure-form pure-form-stacked">
+            <div class="pure-g">
+              <div class="pure-u-1-2">
+                <label for="cat">Category</label>
+                <select name="cat" id="cat" class="form-control input-sm">
+                </select>
+                <label for="subcat">Subcategory</label>
+                <select name="subcat" id="subcat" class="form-control input-sm">
+                </select>
               </div>
-              <div class="col-xs-6">
-                <div class="row">
-                  <div class="col-xs-12">
-                      <div class="form-group">
-                        <button class="btn btn-primary btn-sm" id="generate" type="button">Generate</button>
-                      </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <button class="btn btn-success btn-sm" id="gen-and-copy" type="button">Generate and Copy</button>
-                  </div>
-                </div>
+              <div class="pure-u-1-2">
+                <button class="pure-button pure-button-primary btn-sm" id="generate" type="button">Generate</button>
+
+                <button class="pure-button btn-success btn-sm" id="gen-and-copy" type="button">Generate and Copy</button>
+
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-12">
+            <div class="">
+              <div class="">
                 <label for="">Output</label>
-                <textarea name="output" id="output" cols="30" rows="3" class="form-control input-sm" readonly="readonly"></textarea>
+                <textarea name="output" id="output" cols="30" rows="3" class="pure-input-1" readonly="readonly"></textarea>
               </div>
             </div>
           </form>

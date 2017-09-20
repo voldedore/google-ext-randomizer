@@ -12,5 +12,18 @@
   line-height: 30px;
 }
 #content {
-  padding: 12px 0 12px 0;
+  padding: 10px;
+}
+
+.btn-success {
+  background: rgb(28, 184, 65);
+  color: white;
+}
+
+.btn-sm {
+  font-size: 85%;
+}
+
+.pure-form-stacked select {
+  margin: .8em 0;
 }
