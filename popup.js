@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   Object.keys(faker).forEach(function(e) {
     // Remove locale, localeFallback, locales
-    var outOfScope = ['locale', 'localeFallback', 'locales', 'fake', 'definitions'];
+    var outOfScope = ['locale', 'localeFallback', 'locales', 'fake', 'definitions', 'helpers'];
     //TODO: use definitions instead of current way
     if (outOfScope.indexOf(e) === -1) {
         var option = document.createElement("option");
