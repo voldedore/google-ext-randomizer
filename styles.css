@@ -5,6 +5,10 @@
   height: 30px;
   border-bottom: 1px #ccc solid;
   line-height: 30px;
+  padding: 0 10px;
+}
+#header .setting {
+  text-align: right;
 }
 #footer {
   height: 30px;
