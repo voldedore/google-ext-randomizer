@@ -4,7 +4,18 @@ A Google Chrome extension that generates random data.
 
 ### Installation
 
-Please install it from the Google Chrome extension store.
+Since this extension is still in development phase, it has not been on the Google Web Store yet.
+
+Please follow this to install it.
+
+1. Clone this repo
+
+       git clone https://github.com/voldedore/google-ext-randomizer.git
+
+2. Open Chrome Extension Tab (`chrome://extensions/`) or `Settings > More Tools > Extensions`
+3. Check `Developer mode`
+4. Choose `Load unpacked extension...` then select the directory in which you have cloned the repo.
+
 
 ### Features and TODO
 
