@@ -13,6 +13,7 @@ Please install it from the Google Chrome extension store.
 * [x] Support multi-language generated data.
 * [ ] Be able to fill in HTML forms (by popup icon e.g.)
 * [ ] Allow user to add shortcut of a specific random datatype.
+* [ ] Allow setting to auto-copy on start up.
 
 ### Data Definitions
 
