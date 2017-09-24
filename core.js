@@ -1,3 +1,7 @@
+/**
+ * @author Vinh VO (voldedore@gmail.com)
+ */
+
 var persistence;
 var locale;
 
@@ -25,3 +29,7 @@ function setSettings(obj, id) {
 
   });
 }
+
+var getEl = function (id) {
+  return document.getElementById(id);
+};

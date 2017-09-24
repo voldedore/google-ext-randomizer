@@ -8,11 +8,11 @@ Please install it from the Google Chrome extension store.
 
 ### Features and TODO
 
-* ✓ Generate random data from categories: Fullname, Address, City, Lorem ipsum...
-* ✓ Support coping generated data to clipboard.
-* ✓ Support multi-language generated data.
-* ☐ Be able to fill in HTML forms (by popup icon e.g.)
-* ☐ Allow user to add shortcut of a specific random datatype.
+* [x] Generate random data from categories: Fullname, Address, City, Lorem ipsum...
+* [x] Support coping generated data to clipboard.
+* [x] Support multi-language generated data.
+* [ ] Be able to fill in HTML forms (by popup icon e.g.)
+* [ ] Allow user to add shortcut of a specific random datatype.
 
 ### Data Definitions
 
