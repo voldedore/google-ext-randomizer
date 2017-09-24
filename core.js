@@ -33,3 +33,18 @@ function setSettings(obj, id) {
 var getEl = function (id) {
   return document.getElementById(id);
 };
+
+var getClassNames = function (element) {
+  return element.className.split(' ');
+};
+
+var addClassName = function (element, className) {
+  var classNames = getClassNames(element);
+  classNames.push(className);
+
+  classNames = classNames.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+
+  return classNames.join(' ');
+};
