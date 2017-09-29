@@ -132,9 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
       option.value = e;
       subCatSelect.appendChild(option);
     });
+
+    triggerEvent(genBtn, 'click');
   });
 
-
+  // On change of sub-category select
+  subCatSelect.addEventListener('change', function () {
+    triggerEvent(genBtn, 'click');
+  });
 
   // On click of main button
   genBtn.addEventListener('click', randomize);
